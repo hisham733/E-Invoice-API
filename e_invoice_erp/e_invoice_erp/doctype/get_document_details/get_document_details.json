@@ -1,0 +1,106 @@
+{
+ "autoname": "naming_series: ",
+ "creation": "2024-10-16 15:22:38.536507",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_e_invoice",
+  "api_credentials",
+  "api_access_token",
+  "uuid",
+  "naming_series",
+  "amended_from",
+  "code"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_e_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales E Invoice",
+   "options": "Sales E Invoice",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_e_invoice.api_credentials",
+   "fieldname": "api_credentials",
+   "fieldtype": "Link",
+   "label": "API Credentials",
+   "options": "API Credentials"
+  },
+  {
+   "fieldname": "api_access_token",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "token"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Get Document Details",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Code",
+   "label": "code"
+  },
+  {
+   "bold": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "naming_series",
+   "options": "GDD-INV-.YYYY.-",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "sales_e_invoice.uuid",
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "label": "UUID"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2024-10-16 15:31:23.382816",
+ "modified_by": "Administrator",
+ "module": "E Invoice Erp",
+ "name": "Get Document Details",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "sales_e_invoice",
+ "track_changes": 1
+}
