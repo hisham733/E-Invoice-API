@@ -684,7 +684,7 @@ def send_einvoice(invoice_data):
 
         else:
             # Handle non-successful responses
-            raise Exception(f"Request failed with status code {response.status_code}: {response.text}")
+            raise Exception(f"Request failed with status code {response.status_code}: Please cheack document validation")
 
     except Exception as e:
         # Handle and log any exceptions that occur during the process
@@ -692,3 +692,4 @@ def send_einvoice(invoice_data):
         frappe.msgprint(error_message, title="E-Invoice Error", indicator="red")
         frappe.log_error(error_message, title="E-Invoice Error")
         raise
+
